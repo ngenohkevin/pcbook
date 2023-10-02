@@ -4,4 +4,4 @@ proto:
         --go-grpc_out=pb --go-grpc_opt=paths=source_relative \
         proto/*.proto
 
-.PHONY: postgres
+.PHONY: proto
