@@ -5,15 +5,10 @@ package pb;
 option go_package = "github.com/ngenohkevin/pcbook/pb";
 
 message CPU {
-//  Brand of the CPU
   string brand = 1;
-//  name of the CPU
   string name = 2;
-//  number of CPU cores
   uint32 number_core = 3;
-//  number of CPU threads
   uint32  number_threads = 4;
-//  frequency
   double min_ghz = 5;
   double max_ghz = 6;
 }
