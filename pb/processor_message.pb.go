@@ -25,17 +25,12 @@ type CPU struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	// Brand of the CPU
-	Brand string `protobuf:"bytes,1,opt,name=brand,proto3" json:"brand,omitempty"`
-	// name of the CPU
-	Name string `protobuf:"bytes,2,opt,name=name,proto3" json:"name,omitempty"`
-	// number of CPU cores
-	NumberCore uint32 `protobuf:"varint,3,opt,name=number_core,json=numberCore,proto3" json:"number_core,omitempty"`
-	// number of CPU threads
-	NumberThreads uint32 `protobuf:"varint,4,opt,name=number_threads,json=numberThreads,proto3" json:"number_threads,omitempty"`
-	// frequency
-	MinGhz float64 `protobuf:"fixed64,5,opt,name=min_ghz,json=minGhz,proto3" json:"min_ghz,omitempty"`
-	MaxGhz float64 `protobuf:"fixed64,6,opt,name=max_ghz,json=maxGhz,proto3" json:"max_ghz,omitempty"`
+	Brand         string  `protobuf:"bytes,1,opt,name=brand,proto3" json:"brand,omitempty"`
+	Name          string  `protobuf:"bytes,2,opt,name=name,proto3" json:"name,omitempty"`
+	NumberCore    uint32  `protobuf:"varint,3,opt,name=number_core,json=numberCore,proto3" json:"number_core,omitempty"`
+	NumberThreads uint32  `protobuf:"varint,4,opt,name=number_threads,json=numberThreads,proto3" json:"number_threads,omitempty"`
+	MinGhz        float64 `protobuf:"fixed64,5,opt,name=min_ghz,json=minGhz,proto3" json:"min_ghz,omitempty"`
+	MaxGhz        float64 `protobuf:"fixed64,6,opt,name=max_ghz,json=maxGhz,proto3" json:"max_ghz,omitempty"`
 }
 
 func (x *CPU) Reset() {
