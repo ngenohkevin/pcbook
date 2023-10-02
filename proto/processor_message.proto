@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package pb;
 
-import "proto/memory_message.proto";
+import "memory_message.proto";
 
 option go_package = "github.com/ngenohkevin/pcbook/pb";
 
