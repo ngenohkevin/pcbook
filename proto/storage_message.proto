@@ -12,4 +12,5 @@ message storage {
     SSD = 2;
   }
   Driver driver = 1;
+  Memory memory = 2;
 }
