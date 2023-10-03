@@ -5,7 +5,7 @@ import "memory_message.proto";
 
 option go_package = "github.com/ngenohkevin/pcbook/pb";
 
-message storage {
+message Storage {
   enum Driver {
     UNKNOWN = 0;
     HDD = 1;
