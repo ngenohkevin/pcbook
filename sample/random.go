@@ -39,9 +39,31 @@ func randomCPUName(brand string) string {
 		"Ryzen 3 PRO 3200GE",
 	)
 }
+func randomGPUBrand() string {
+	return randomStringFromSet("NVIDIA", "AMD")
+}
+func randomGPUName(brand string) string {
+	if brand == "NVIDIA" {
+		return randomStringFromSet(
+			"RTX 2060",
+			"RTX 2070",
+			"GTX 1660-Ti",
+			"GTX 1070",
+		)
+	}
+	return randomStringFromSet(
+		"RX 590",
+		"RX 580",
+		"RX 5700-XT",
+		"RX VEGA-56",
+	)
+}
 
-func randomInt(min, max) int {
-
+func randomInt(min, max int) int {
+	return min + rand.Intn(max-min+1)
+}
+func randomFloat64(min, max float64) float64 {
+	return min + rand.Float64()*(max-min)
 }
 
 func randomStringFromSet(a ...string) string {
