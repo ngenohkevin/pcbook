@@ -10,3 +10,53 @@ func NewKeyBoard() *pb.Keyboard {
 	}
 	return keyboard
 }
+
+func NewCPU() *pb.CPU {
+	brand := randomCPUBrand()
+	name := randomCPUName(brand)
+	numberCores := randomInt(2, 8)
+	numberThreads := randomInt(numberCores, 12)
+	minGhz := randomFloat64(2.0, 3.5)
+	maxGhz := randomFloat64(minGhz, 5.0)
+
+	cpu := &pb.CPU{
+		Brand:         brand,
+		Name:          name,
+		NumberCore:    uint32(numberCores),
+		NumberThreads: uint32(numberThreads),
+		MinGhz:        minGhz,
+		MaxGhz:        maxGhz,
+	}
+
+	return cpu
+}
+
+func NewGPU() *pb.GPU {
+	brand := randomGPUBrand()
+	name := randomGPUName(brand)
+
+	minGHZ := randomFloat64(1.0, 1.5)
+	maxGHZ := randomFloat64(minGHZ, 2.0)
+
+	memory := &pb.Memory{
+		Value: uint64(randomInt(2, 6)),
+		Unit:  pb.Memory_GIGABYTE,
+	}
+
+	gpu := &pb.GPU{
+		Brand:  brand,
+		Name:   name,
+		MinGhz: minGHZ,
+		MaxGhz: maxGHZ,
+		Memory: memory,
+	}
+	return gpu
+}
+
+func NewRAM() *pb.Memory {
+	ram := &pb.Memory{
+		Value: uint64(randomInt(4, 64)),
+		Unit:  pb.Memory_GIGABYTE,
+	}
+	return ram
+}
