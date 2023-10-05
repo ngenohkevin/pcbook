@@ -6,6 +6,7 @@ import "github.com/ngenohkevin/pcbook/pb"
 func NewKeyBoard() *pb.Keyboard {
 	keyboard := &pb.Keyboard{
 		Layout:  randomKeyboardLayout(),
-		Backlit: randomBoolean(),
+		Backlit: randomBool(),
 	}
+	return keyboard
 }
