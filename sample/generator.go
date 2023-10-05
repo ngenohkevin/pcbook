@@ -72,12 +72,12 @@ func NewSSD() *pb.Storage {
 }
 
 func HDD() *pb.Storage {
-	ssd := &pb.Storage{
+	hdd := &pb.Storage{
 		Driver: pb.Storage_HDD,
 		Memory: &pb.Memory{
 			Value: uint64(randomInt(1, 6)),
 			Unit:  pb.Memory_TERABYTE,
 		},
 	}
-	return ssd
+	return hdd
 }
