@@ -95,5 +95,19 @@ func NewScreen() *pb.Screen {
 
 // NewLaptop returns a new sample
 func NewLaptop() *pb.Laptop {
-
+	laptop := &pb.Laptop{
+		Id:          "",
+		Brand:       "",
+		Name:        "",
+		Cpu:         nil,
+		Ram:         nil,
+		Gpus:        nil,
+		Storages:    nil,
+		Screen:      nil,
+		Keyboard:    nil,
+		Weight:      nil,
+		PriceUsd:    0,
+		ReleaseYear: 0,
+		UpdatedAt:   nil,
+	}
 }
