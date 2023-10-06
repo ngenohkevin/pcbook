@@ -81,3 +81,18 @@ func HDD() *pb.Storage {
 	}
 	return hdd
 }
+
+func NewScreen() *pb.Screen {
+	height := randomInt(1080, 4320)
+	width := height * 16 / 9
+	screen := &pb.Screen{
+		SizeInch: randomFloat32(13, 17),
+		Resolution: &pb.Screen_Resolution{
+			Width:  uint32(height),
+			Height: uint32(width),
+		},
+		Panel:      0,
+		Multitouch: false,
+	}
+	return screen
+}
