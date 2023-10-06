@@ -83,16 +83,17 @@ func HDD() *pb.Storage {
 }
 
 func NewScreen() *pb.Screen {
-	height := randomInt(1080, 4320)
-	width := height * 16 / 9
+
 	screen := &pb.Screen{
-		SizeInch: randomFloat32(13, 17),
-		Resolution: &pb.Screen_Resolution{
-			Width:  uint32(height),
-			Height: uint32(width),
-		},
-		Panel:      0,
-		Multitouch: false,
+		SizeInch:   randomFloat32(13, 17),
+		Resolution: randomScreenResolution(),
+		Panel:      randomScreenPanel(),
+		Multitouch: randomBool(),
 	}
 	return screen
+}
+
+// NewLaptop returns a new sample
+func NewLaptop() *pb.Laptop {
+
 }
