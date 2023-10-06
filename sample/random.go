@@ -58,6 +58,21 @@ func randomGPUName(brand string) string {
 		"RX VEGA-56",
 	)
 }
+func randomScreenResolution() *pb.Screen_Resolution {
+	height := randomInt(1080, 4320)
+	width := height * 16 / 9
+	Resolution := &pb.Screen_Resolution{
+		Width:  uint32(height),
+		Height: uint32(width),
+	}
+	return Resolution
+}
+func randomScreenPanel() pb.Screen_Panel {
+	if rand.Intn(2) == 1 {
+		return pb.Screen_IPS
+	}
+	return pb.Screen_OLED
+}
 
 func randomInt(min, max int) int {
 	return min + rand.Intn(max-min+1)
