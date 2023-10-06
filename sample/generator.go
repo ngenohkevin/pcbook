@@ -1,6 +1,9 @@
 package sample
 
-import "github.com/ngenohkevin/pcbook/pb"
+import (
+	"github.com/ngenohkevin/pcbook/pb"
+	"google.golang.org/protobuf/types/known/timestamppb"
+)
 
 // NewKeyBoard returns a new sample of the keyboard
 func NewKeyBoard() *pb.Keyboard {
@@ -71,7 +74,7 @@ func NewSSD() *pb.Storage {
 	return ssd
 }
 
-func HDD() *pb.Storage {
+func NewHDD() *pb.Storage {
 	hdd := &pb.Storage{
 		Driver: pb.Storage_HDD,
 		Memory: &pb.Memory{
@@ -95,19 +98,23 @@ func NewScreen() *pb.Screen {
 
 // NewLaptop returns a new sample
 func NewLaptop() *pb.Laptop {
+	brand := randomLaptopBrand()
+	name := randomLaptopName(brand)
+
 	laptop := &pb.Laptop{
-		Id:          "",
-		Brand:       "",
-		Name:        "",
-		Cpu:         nil,
-		Ram:         nil,
-		Gpus:        nil,
-		Storages:    nil,
-		Screen:      nil,
-		Keyboard:    nil,
-		Weight:      nil,
-		PriceUsd:    0,
-		ReleaseYear: 0,
-		UpdatedAt:   nil,
+		Id:          randomID(),
+		Brand:       brand,
+		Name:        name,
+		Cpu:         NewCPU(),
+		Ram:         NewRAM(),
+		Gpus:        []*pb.GPU{NewGPU()},
+		Storages:    []*pb.Storage{NewSSD(), NewHDD()},
+		Screen:      NewScreen(),
+		Keyboard:    NewKeyBoard(),
+		Weight:      &pb.Laptop_WeightKg{WeightKg: randomFloat64(1.0, 3.0)},
+		PriceUsd:    randomFloat64(1500, 3000),
+		ReleaseYear: uint32(randomInt(2015, 2019)),
+		UpdatedAt:   timestamppb.Now(),
 	}
+	return laptop
 }
