@@ -1,6 +1,7 @@
 package sample
 
 import (
+	"github.com/google/uuid"
 	"github.com/ngenohkevin/pcbook/pb"
 	"math/rand"
 )
@@ -41,6 +42,21 @@ func randomCPUName(brand string) string {
 }
 func randomGPUBrand() string {
 	return randomStringFromSet("NVIDIA", "AMD")
+}
+func randomLaptopBrand() string {
+	return randomStringFromSet("Apple", "Dell", "HP", "Lenovo")
+}
+func randomLaptopName(brand string) string {
+	switch brand {
+	case "Apple":
+		return randomStringFromSet("Macbook Air", "Macbook Pro")
+	case "HP":
+		return randomStringFromSet("Notebook", "Pro Desk", "Helios")
+	case "Dell":
+		return randomStringFromSet("Latitude", "XPS", "Vostro", "Alienware")
+	default:
+		return randomStringFromSet("Thinkpad X1", "Thinkpad P1", "Thinkpad p53")
+	}
 }
 func randomGPUName(brand string) string {
 	if brand == "NVIDIA" {
@@ -90,4 +106,7 @@ func randomStringFromSet(a ...string) string {
 		return ""
 	}
 	return a[rand.Intn(n)]
+}
+func randomID() string {
+	return uuid.New().String()
 }
