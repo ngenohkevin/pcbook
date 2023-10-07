@@ -6,6 +6,11 @@ import (
 	"os"
 )
 
+// WriteProtobufToJSONFile writes protocol buffer message to JSON file
+func WriteProtobufToJSONFile(message proto.Message, filename string) error {
+	data, err := ProtobufToJSON(message)
+}
+
 // WriteProtobufToBinaryFile writes protocol buffer message to binary file
 func WriteProtobufToBinaryFile(message proto.Message, filename string) error {
 	data, err := proto.Marshal(message)
