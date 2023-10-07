@@ -9,6 +9,16 @@ import (
 // WriteProtobufToJSONFile writes protocol buffer message to JSON file
 func WriteProtobufToJSONFile(message proto.Message, filename string) error {
 	data, err := ProtobufToJSON(message)
+	if err != nil {
+		return fmt.Errorf("cannot marshall proto message to JSON %w", err)
+	}
+
+	err = os.WriteFile(filename, []byte(data), 0644)
+	if err != nil {
+		return fmt.Errorf("cannot write JSON data to file %w", err)
+	}
+
+	return nil
 }
 
 // WriteProtobufToBinaryFile writes protocol buffer message to binary file
