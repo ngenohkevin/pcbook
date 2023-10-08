@@ -1,0 +1,62 @@
+{
+ "id": "d0c1df80-8dcb-4436-845b-e256db581072",
+ "brand": "Lenovo",
+ "name": "Thinkpad P1",
+ "cpu": {
+  "brand": "Intel",
+  "name": "Core i3 1005G1",
+  "number_core": 8,
+  "number_threads": 11,
+  "min_ghz": 2.6847528202945474,
+  "max_ghz": 2.761227655996943
+ },
+ "ram": {
+  "value": "46",
+  "unit": "GIGABYTE"
+ },
+ "gpus": [
+  {
+   "brand": "NVIDIA",
+   "name": "GTX 1660-Ti",
+   "min_ghz": 1.4298373555033597,
+   "max_ghz": 1.6091939208179604,
+   "memory": {
+    "value": "5",
+    "unit": "GIGABYTE"
+   }
+  }
+ ],
+ "storages": [
+  {
+   "driver": "SSD",
+   "memory": {
+    "value": "641",
+    "unit": "GIGABYTE"
+   }
+  },
+  {
+   "driver": "HDD",
+   "memory": {
+    "value": "6",
+    "unit": "TERABYTE"
+   }
+  }
+ ],
+ "screen": {
+  "size_inch": 16.436323,
+  "resolution": {
+   "width": 1554,
+   "height": 2762
+  },
+  "panel": "IPS",
+  "multitouch": true
+ },
+ "keyboard": {
+  "layout": "AZERTY",
+  "backlit": false
+ },
+ "weight_kg": 1.3737690006648529,
+ "price_usd": 2067.190324754807,
+ "release_year": 2019,
+ "updated_at": "2023-10-08T18:41:57.641535046Z"
+}
