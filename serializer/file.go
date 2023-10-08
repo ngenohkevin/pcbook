@@ -35,8 +35,8 @@ func WriteProtobufToBinaryFile(message proto.Message, filename string) error {
 	return nil
 }
 
-// ReadProtobuffFromBinaryFile reads protocol buffer message from binary file
-func ReadProtobuffFromBinaryFile(filename string, message proto.Message) error {
+// ReadProtobufFromBinaryFile reads protocol buffer message from binary file
+func ReadProtobufFromBinaryFile(filename string, message proto.Message) error {
 	data, err := os.ReadFile(filename)
 	if err != nil {
 		return fmt.Errorf("cannot binary data from file: %w", err)
