@@ -18,7 +18,7 @@ func TestFileSerializer(t *testing.T) {
 	require.NoError(t, err)
 
 	laptop2 := &pb.Laptop{}
-	err = ReadProtobuffFromBinaryFile(binaryFile, laptop2)
+	err = ReadProtobufFromBinaryFile(binaryFile, laptop2)
 	require.NoError(t, err)
 	require.True(t, proto.Equal(laptop1, laptop2))
 }
