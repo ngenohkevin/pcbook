@@ -4,7 +4,12 @@ import (
 	"github.com/google/uuid"
 	"github.com/ngenohkevin/pcbook/pb"
 	"math/rand"
+	"time"
 )
+
+func init() {
+	rand.NewSource(time.Now().UnixNano())
+}
 
 func randomKeyboardLayout() pb.Keyboard_Layout {
 	switch rand.Intn(3) {
