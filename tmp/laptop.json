@@ -1,27 +1,27 @@
 {
- "id": "d0c1df80-8dcb-4436-845b-e256db581072",
- "brand": "Lenovo",
- "name": "Thinkpad P1",
+ "id": "bfd7b3aa-5f30-43d2-acc0-65d5d79aa2bf",
+ "brand": "HP",
+ "name": "Helios",
  "cpu": {
   "brand": "Intel",
-  "name": "Core i3 1005G1",
-  "number_core": 8,
-  "number_threads": 11,
-  "min_ghz": 2.6847528202945474,
-  "max_ghz": 2.761227655996943
+  "name": "Core i9 9980HK",
+  "number_core": 5,
+  "number_threads": 10,
+  "min_ghz": 2.2627919827816743,
+  "max_ghz": 2.5726763098269303
  },
  "ram": {
-  "value": "46",
+  "value": "11",
   "unit": "GIGABYTE"
  },
  "gpus": [
   {
    "brand": "NVIDIA",
    "name": "GTX 1660-Ti",
-   "min_ghz": 1.4298373555033597,
-   "max_ghz": 1.6091939208179604,
+   "min_ghz": 1.3627084218693495,
+   "max_ghz": 1.4588632007398916,
    "memory": {
-    "value": "5",
+    "value": "4",
     "unit": "GIGABYTE"
    }
   }
@@ -30,7 +30,7 @@
   {
    "driver": "SSD",
    "memory": {
-    "value": "641",
+    "value": "311",
     "unit": "GIGABYTE"
    }
   },
@@ -43,20 +43,20 @@
   }
  ],
  "screen": {
-  "size_inch": 16.436323,
+  "size_inch": 14.740095,
   "resolution": {
-   "width": 1554,
-   "height": 2762
+   "width": 2212,
+   "height": 3932
   },
-  "panel": "IPS",
+  "panel": "OLED",
   "multitouch": true
  },
  "keyboard": {
   "layout": "AZERTY",
   "backlit": false
  },
- "weight_kg": 1.3737690006648529,
- "price_usd": 2067.190324754807,
- "release_year": 2019,
- "updated_at": "2023-10-08T18:41:57.641535046Z"
+ "weight_kg": 2.307791391345196,
+ "price_usd": 2612.6398741379344,
+ "release_year": 2015,
+ "updated_at": "2023-10-10T18:05:50.107630178Z"
 }
