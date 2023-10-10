@@ -1,27 +1,27 @@
 {
- "id": "bfd7b3aa-5f30-43d2-acc0-65d5d79aa2bf",
- "brand": "HP",
- "name": "Helios",
+ "id": "a4682202-b31c-4ba5-bfd7-01058ff6ad5e",
+ "brand": "Lenovo",
+ "name": "Thinkpad X1",
  "cpu": {
-  "brand": "Intel",
-  "name": "Core i9 9980HK",
+  "brand": "AMD",
+  "name": "Ryzen 7 PRO 2700U",
   "number_core": 5,
-  "number_threads": 10,
-  "min_ghz": 2.2627919827816743,
-  "max_ghz": 2.5726763098269303
+  "number_threads": 5,
+  "min_ghz": 2.7583146608593516,
+  "max_ghz": 4.330041518051694
  },
  "ram": {
-  "value": "11",
+  "value": "25",
   "unit": "GIGABYTE"
  },
  "gpus": [
   {
-   "brand": "NVIDIA",
-   "name": "GTX 1660-Ti",
-   "min_ghz": 1.3627084218693495,
-   "max_ghz": 1.4588632007398916,
+   "brand": "AMD",
+   "name": "RX 590",
+   "min_ghz": 1.1190617775858753,
+   "max_ghz": 1.176822762565158,
    "memory": {
-    "value": "4",
+    "value": "6",
     "unit": "GIGABYTE"
    }
   }
@@ -30,33 +30,33 @@
   {
    "driver": "SSD",
    "memory": {
-    "value": "311",
+    "value": "1018",
     "unit": "GIGABYTE"
    }
   },
   {
    "driver": "HDD",
    "memory": {
-    "value": "6",
+    "value": "1",
     "unit": "TERABYTE"
    }
   }
  ],
  "screen": {
-  "size_inch": 14.740095,
+  "size_inch": 14.883446,
   "resolution": {
-   "width": 2212,
-   "height": 3932
+   "width": 1620,
+   "height": 2880
   },
   "panel": "OLED",
   "multitouch": true
  },
  "keyboard": {
-  "layout": "AZERTY",
-  "backlit": false
+  "layout": "QWERTY",
+  "backlit": true
  },
- "weight_kg": 2.307791391345196,
- "price_usd": 2612.6398741379344,
- "release_year": 2015,
- "updated_at": "2023-10-10T18:05:50.107630178Z"
+ "weight_kg": 1.7957415951210325,
+ "price_usd": 1858.1862949114638,
+ "release_year": 2019,
+ "updated_at": "2023-10-10T18:09:08.535677434Z"
 }
