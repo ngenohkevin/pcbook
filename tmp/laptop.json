@@ -1,14 +1,14 @@
 {
- "id": "a4682202-b31c-4ba5-bfd7-01058ff6ad5e",
- "brand": "Lenovo",
- "name": "Thinkpad X1",
+ "id": "7ede1ca0-7729-4716-8646-dfc173a9c486",
+ "brand": "Dell",
+ "name": "Alienware",
  "cpu": {
   "brand": "AMD",
-  "name": "Ryzen 7 PRO 2700U",
-  "number_core": 5,
-  "number_threads": 5,
-  "min_ghz": 2.7583146608593516,
-  "max_ghz": 4.330041518051694
+  "name": "Ryzen 3 PRO 3200GE",
+  "number_core": 6,
+  "number_threads": 10,
+  "min_ghz": 2.45932469058439,
+  "max_ghz": 3.28205387720096
  },
  "ram": {
   "value": "25",
@@ -17,9 +17,9 @@
  "gpus": [
   {
    "brand": "AMD",
-   "name": "RX 590",
-   "min_ghz": 1.1190617775858753,
-   "max_ghz": 1.176822762565158,
+   "name": "RX VEGA-56",
+   "min_ghz": 1.0418156036177564,
+   "max_ghz": 1.344074247917479,
    "memory": {
     "value": "6",
     "unit": "GIGABYTE"
@@ -30,7 +30,7 @@
   {
    "driver": "SSD",
    "memory": {
-    "value": "1018",
+    "value": "988",
     "unit": "GIGABYTE"
    }
   },
@@ -43,20 +43,20 @@
   }
  ],
  "screen": {
-  "size_inch": 14.883446,
+  "size_inch": 14.803074,
   "resolution": {
-   "width": 1620,
-   "height": 2880
+   "width": 3361,
+   "height": 5975
   },
   "panel": "OLED",
   "multitouch": true
  },
  "keyboard": {
-  "layout": "QWERTY",
+  "layout": "QWERTZ",
   "backlit": true
  },
- "weight_kg": 1.7957415951210325,
- "price_usd": 1858.1862949114638,
- "release_year": 2019,
- "updated_at": "2023-10-10T18:09:08.535677434Z"
+ "weight_kg": 2.7912180043701285,
+ "price_usd": 1638.5288136076097,
+ "release_year": 2018,
+ "updated_at": "2023-10-11T07:25:09.509882177Z"
 }
