@@ -1,6 +1,9 @@
 package service
 
-import "github.com/ngenohkevin/pcbook/pb"
+import (
+	"github.com/ngenohkevin/pcbook/pb"
+	"sync"
+)
 
 // LaptopStore is an interface to store laptop
 type LaptopStore interface {
@@ -10,5 +13,11 @@ type LaptopStore interface {
 
 // InMemoryLaptopStore stores laptop in memory
 type InMemoryLaptopStore struct {
-	data map[string]*pb.Laptop
+	mutex sync.RWMutex
+	data  map[string]*pb.Laptop
+}
+
+// NewInMemoryLaptopStore returns a new InMemoryLaptopStore
+func NewInMemoryLaptopStore() *InMemoryLaptopStore {
+	return &InMemoryLaptopStore{data: make(map[string]*pb.Laptop)}
 }
