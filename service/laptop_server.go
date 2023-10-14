@@ -2,6 +2,7 @@ package service
 
 import (
 	"context"
+	"errors"
 	"github.com/google/uuid"
 	"github.com/ngenohkevin/pcbook/pb"
 	"google.golang.org/grpc/codes"
@@ -36,4 +37,17 @@ func (server *LaptopServer) CreateLaptop(ctx context.Context, req *pb.CreateLapt
 		}
 	}
 	//	save the laptop to store
+	err := server.Store.Save(laptop)
+	if err != nil {
+		code := codes.Internal
+		if errors.Is(err, ErrAlreadyExists) {
+			code = codes.AlreadyExists
+		}
+		return nil, status.Errorf(code, "cannot save the laptop to the store: %v", err)
+	}
+	log.Printf("saved laptop with id: %s", laptop.Id)
+
+	res := &pb.CreateLaptopResponse{Id: laptop.Id}
+
+	return res, nil
 }
