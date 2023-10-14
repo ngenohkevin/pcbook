@@ -10,6 +10,7 @@ import (
 )
 
 type LaptopServer struct {
+	Store LaptopStore
 }
 
 func NewLaptopServer() *LaptopServer {
@@ -34,4 +35,5 @@ func (server *LaptopServer) CreateLaptop(ctx context.Context, req *pb.CreateLapt
 			laptop.Id = id.String()
 		}
 	}
+	//	save the laptop to store
 }
