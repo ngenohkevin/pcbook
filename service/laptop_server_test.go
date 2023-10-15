@@ -1,10 +1,12 @@
 package service
 
 import (
+	"context"
 	"github.com/ngenohkevin/pcbook/pb"
 	"github.com/ngenohkevin/pcbook/sample"
 	"github.com/stretchr/testify/require"
 	"google.golang.org/grpc/codes"
+	"google.golang.org/grpc/status"
 	"testing"
 )
 
@@ -58,6 +60,23 @@ func TestServerCreateLaptop(t *testing.T) {
 
 		t.Run(tc.name, func(t *testing.T) {
 			t.Parallel()
+
+			req := &pb.CreateLaptopRequest{Laptop: tc.laptop}
+			server := NewLaptopServer(tc.store)
+			res, err := server.CreateLaptop(context.Background(), req)
+			if tc.code == codes.OK {
+				require.NoError(t, err)
+				require.NotNil(t, res.Id)
+				require.NotEmpty(t, res.Id)
+				if len(tc.laptop.Id) > 0 {
+					require.Equal(t, tc.laptop.Id, res.Id)
+				}
+			} else {
+				require.NoError(t, err)
+				require.Nil(t, res)
+				st, ok := status.FromError(err)
+				require.True(t, ok)
+			}
 		})
 	}
 }
