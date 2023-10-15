@@ -76,6 +76,7 @@ func TestServerCreateLaptop(t *testing.T) {
 				require.Nil(t, res)
 				st, ok := status.FromError(err)
 				require.True(t, ok)
+				require.Equal(t, tc.code, st.Code())
 			}
 		})
 	}
