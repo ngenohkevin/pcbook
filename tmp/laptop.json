@@ -1,27 +1,27 @@
 {
- "id": "7ede1ca0-7729-4716-8646-dfc173a9c486",
- "brand": "Dell",
- "name": "Alienware",
+ "id": "29b7dbd9-d266-4dbc-86b2-cd46fe6ad93f",
+ "brand": "HP",
+ "name": "Notebook",
  "cpu": {
   "brand": "AMD",
   "name": "Ryzen 3 PRO 3200GE",
   "number_core": 6,
-  "number_threads": 10,
-  "min_ghz": 2.45932469058439,
-  "max_ghz": 3.28205387720096
+  "number_threads": 8,
+  "min_ghz": 2.0854362834275353,
+  "max_ghz": 2.884306459852769
  },
  "ram": {
-  "value": "25",
+  "value": "24",
   "unit": "GIGABYTE"
  },
  "gpus": [
   {
    "brand": "AMD",
-   "name": "RX VEGA-56",
-   "min_ghz": 1.0418156036177564,
-   "max_ghz": 1.344074247917479,
+   "name": "RX 5700-XT",
+   "min_ghz": 1.417723388622257,
+   "max_ghz": 1.9906160607860524,
    "memory": {
-    "value": "6",
+    "value": "4",
     "unit": "GIGABYTE"
    }
   }
@@ -30,33 +30,33 @@
   {
    "driver": "SSD",
    "memory": {
-    "value": "988",
+    "value": "435",
     "unit": "GIGABYTE"
    }
   },
   {
    "driver": "HDD",
    "memory": {
-    "value": "1",
+    "value": "4",
     "unit": "TERABYTE"
    }
   }
  ],
  "screen": {
-  "size_inch": 14.803074,
+  "size_inch": 16.97796,
   "resolution": {
-   "width": 3361,
-   "height": 5975
+   "width": 1084,
+   "height": 1927
   },
-  "panel": "OLED",
+  "panel": "IPS",
   "multitouch": true
  },
  "keyboard": {
   "layout": "QWERTZ",
   "backlit": true
  },
- "weight_kg": 2.7912180043701285,
- "price_usd": 1638.5288136076097,
- "release_year": 2018,
- "updated_at": "2023-10-11T07:25:09.509882177Z"
+ "weight_kg": 2.721744801177489,
+ "price_usd": 2215.1967919418685,
+ "release_year": 2017,
+ "updated_at": "2023-10-15T16:08:56.251438942Z"
 }
