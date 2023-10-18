@@ -1,7 +1,9 @@
 package service
 
 import (
+	"context"
 	"github.com/ngenohkevin/pcbook/pb"
+	"github.com/ngenohkevin/pcbook/sample"
 	"github.com/stretchr/testify/require"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials/insecure"
@@ -14,6 +16,15 @@ func TestClientCreateLaptop(t *testing.T) {
 	t.Parallel()
 	laptopServer, serverAddress := startTestLaptopServer(t)
 	laptopClient := newTestLaptopClient(t, serverAddress)
+
+	laptop := sample.NewLaptop()
+	expectedID := laptop.Id
+	req := &pb.CreateLaptopRequest{Laptop: laptop}
+
+	res, err := laptopClient.CreateLaptop(context.Background(), req)
+	require.NoError(t, err)
+	require.NotNil(t, res)
+	require.Equal(t, expectedID, res.Id)
 }
 
 func startTestLaptopServer(t *testing.T) (*LaptopServer, string) {
