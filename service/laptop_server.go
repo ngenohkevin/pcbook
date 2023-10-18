@@ -11,11 +11,12 @@ import (
 )
 
 type LaptopServer struct {
+	pb.UnimplementedLaptopServiceServer
 	Store LaptopStore
 }
 
 func NewLaptopServer(store LaptopStore) *LaptopServer {
-	return &LaptopServer{store}
+	return &LaptopServer{Store: store}
 }
 
 // CreateLaptop is a unary RPC to create a new laptop
