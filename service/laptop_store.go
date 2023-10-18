@@ -47,3 +47,21 @@ func (store *InMemoryLaptopStore) Save(laptop *pb.Laptop) error {
 	return nil
 
 }
+
+// Find finds laptop by id
+func (store *InMemoryLaptopStore) Find(id string) (*pb.Laptop, error) {
+	store.mutex.RLock()
+	defer store.mutex.RUnlock()
+
+	laptop := store.data[id]
+	if laptop == nil {
+		return nil, nil
+	}
+	//	deep copy
+	other := &pb.Laptop{}
+	err := copier.Copy(other, laptop)
+	if err != nil {
+		return nil, fmt.Errorf("cannot copy laptop data: %w", err)
+	}
+	return other, nil
+}
