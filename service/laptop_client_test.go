@@ -25,6 +25,11 @@ func TestClientCreateLaptop(t *testing.T) {
 	require.NoError(t, err)
 	require.NotNil(t, res)
 	require.Equal(t, expectedID, res.Id)
+
+	other, err := laptopServer.Store.Find(res.Id)
+	require.NoError(t, err)
+	require.NotNil(t, other)
+
 }
 
 func startTestLaptopServer(t *testing.T) (*LaptopServer, string) {
