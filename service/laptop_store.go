@@ -14,6 +14,8 @@ var ErrAlreadyExists = errors.New("record already exists")
 type LaptopStore interface {
 	//	save the laptop to store
 	Save(laptop *pb.Laptop) error
+	//Find finds laptop by id
+	Find(id string) (*pb.Laptop, error)
 }
 
 // InMemoryLaptopStore stores laptop in memory
