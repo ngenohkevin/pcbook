@@ -11,7 +11,8 @@ import (
 
 func TestClientCreateLaptop(t *testing.T) {
 	t.Parallel()
-
+	//laptopServer, serverAddress := startTestLaptopServer(t)
+	//laptopClient := newTestLaptopClient(t, serverAddress)
 }
 
 func startTestLaptopServer(t *testing.T) (*LaptopServer, string) {
