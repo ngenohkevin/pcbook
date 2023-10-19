@@ -36,5 +36,5 @@ func main() {
 		}
 		return
 	}
-	log.Printf("created laptop wioth id: %s", res.Id)
+	log.Printf("created laptop with id: %s", res.Id)
 }
