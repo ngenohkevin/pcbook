@@ -29,6 +29,8 @@ func main() {
 	}
 	//set timeout
 	ctx, cancel := context.WithTimeout(context.Background(), 5*time.Second)
+	defer cancel()
+
 	res, err := laptopClient.CreateLaptop(context.Background(), req)
 	if err != nil {
 		st, ok := status.FromError(err)
