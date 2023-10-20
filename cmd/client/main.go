@@ -26,6 +26,8 @@ func main() {
 	req := &pb.CreateLaptopRequest{
 		Laptop: laptop,
 	}
+	//set timeout
+
 	res, err := laptopClient.CreateLaptop(context.Background(), req)
 	if err != nil {
 		st, ok := status.FromError(err)
