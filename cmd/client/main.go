@@ -10,6 +10,7 @@ import (
 	"google.golang.org/grpc/credentials/insecure"
 	"google.golang.org/grpc/status"
 	"log"
+	"time"
 )
 
 func main() {
@@ -27,7 +28,7 @@ func main() {
 		Laptop: laptop,
 	}
 	//set timeout
-
+	ctx, cancel := context.WithTimeout(context.Background(), 5*time.Second)
 	res, err := laptopClient.CreateLaptop(context.Background(), req)
 	if err != nil {
 		st, ok := status.FromError(err)
