@@ -40,6 +40,7 @@ func (server *LaptopServer) CreateLaptop(ctx context.Context, req *pb.CreateLapt
 
 	//some heavy processing
 	time.Sleep(6 * time.Second)
+	
 	//	save the laptop to store
 	err := server.Store.Save(laptop)
 	if err != nil {
