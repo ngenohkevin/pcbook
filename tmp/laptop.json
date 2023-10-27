@@ -1,14 +1,14 @@
 {
- "id": "0c0d7ece-de46-41e5-a891-01d6b3fea166",
- "brand": "HP",
- "name": "Helios",
+ "id": "874689e2-1720-4b3f-87f4-5fcbabbe6fc9",
+ "brand": "Dell",
+ "name": "XPS",
  "cpu": {
-  "brand": "Intel",
-  "name": "Xeon E-2286M",
-  "number_core": 8,
-  "number_threads": 8,
-  "min_ghz": 2.1701713580585125,
-  "max_ghz": 4.024188693744966
+  "brand": "AMD",
+  "name": "Ryzen 5 PRO 3500U",
+  "number_core": 4,
+  "number_threads": 10,
+  "min_ghz": 2.9652692175211417,
+  "max_ghz": 4.206415501666339
  },
  "ram": {
   "value": "35",
@@ -17,11 +17,11 @@
  "gpus": [
   {
    "brand": "AMD",
-   "name": "RX 5700-XT",
-   "min_ghz": 1.222713726409272,
-   "max_ghz": 1.8488592296913788,
+   "name": "RX 590",
+   "min_ghz": 1.1052239762127603,
+   "max_ghz": 1.1572568416063436,
    "memory": {
-    "value": "4",
+    "value": "6",
     "unit": "GIGABYTE"
    }
   }
@@ -30,33 +30,33 @@
   {
    "driver": "SSD",
    "memory": {
-    "value": "792",
+    "value": "793",
     "unit": "GIGABYTE"
    }
   },
   {
    "driver": "HDD",
    "memory": {
-    "value": "4",
+    "value": "5",
     "unit": "TERABYTE"
    }
   }
  ],
  "screen": {
-  "size_inch": 14.914514,
+  "size_inch": 13.03578,
   "resolution": {
-   "width": 3218,
-   "height": 5720
+   "width": 2285,
+   "height": 4062
   },
-  "panel": "OLED",
-  "multitouch": true
+  "panel": "IPS",
+  "multitouch": false
  },
  "keyboard": {
   "layout": "QWERTY",
   "backlit": true
  },
- "weight_kg": 2.4091551706632632,
- "price_usd": 2464.370390974379,
+ "weight_kg": 2.6672739513085206,
+ "price_usd": 2463.246385829975,
  "release_year": 2016,
- "updated_at": "2023-10-19T08:35:21.515875141Z"
+ "updated_at": "2023-10-27T08:43:15.201541255Z"
 }
