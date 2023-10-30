@@ -37,7 +37,7 @@ func (store *InMemoryLaptopStore) Save(laptop *pb.Laptop) error {
 		return ErrAlreadyExists
 	}
 
-	//	deep copy of the laptop server
+	//	deep copy laptop server
 	other := &pb.Laptop{}
 	err := copier.Copy(other, laptop)
 	if err != nil {
