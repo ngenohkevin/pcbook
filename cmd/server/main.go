@@ -25,7 +25,7 @@ func main() {
 	if err != nil {
 		log.Fatal("cannot start server: ", err)
 	}
-	// server
+	// server g
 	err = grpcServer.Serve(listener)
 	if err != nil {
 		log.Fatal("cannot start server: ", err)
