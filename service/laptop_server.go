@@ -25,7 +25,7 @@ func (server *LaptopServer) CreateLaptop(ctx context.Context, req *pb.CreateLapt
 	log.Printf("recieve a create-laptop request with id: %s", laptop.Id)
 
 	if len(laptop.Id) > 0 {
-		//	check if it's a valid
+		//	check if it's a valid much
 		_, err := uuid.Parse(laptop.Id)
 		if err != nil {
 			return nil, status.Errorf(codes.InvalidArgument, "laptop ID is not a valid UUID: %v", err)
