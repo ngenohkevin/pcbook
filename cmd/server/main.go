@@ -11,6 +11,7 @@ import (
 )
 
 func main() {
+	// cmd g
 	port := flag.Int("port", 0, "the server port")
 	flag.Parse()
 	log.Printf("start server on port %d", *port)
@@ -24,6 +25,7 @@ func main() {
 	if err != nil {
 		log.Fatal("cannot start server: ", err)
 	}
+	// server g
 	err = grpcServer.Serve(listener)
 	if err != nil {
 		log.Fatal("cannot start server: ", err)
