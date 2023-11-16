@@ -22,6 +22,7 @@ func randomKeyboardLayout() pb.Keyboard_Layout {
 	}
 }
 
+// random boolean values
 func randomBool() bool {
 	return rand.Intn(2) == 1
 }
