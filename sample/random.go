@@ -27,6 +27,7 @@ func randomBool() bool {
 	return rand.Intn(2) == 1
 }
 
+// random CPU values
 func randomCPUBrand() string {
 	return randomStringFromSet("Intel", "AMD")
 }
