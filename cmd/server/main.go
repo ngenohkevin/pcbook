@@ -11,7 +11,7 @@ import (
 )
 
 func main() {
-	// cmd group
+	// cmd group parsing
 	port := flag.Int("port", 0, "the server port")
 	flag.Parse()
 	log.Printf("start server on port %d", *port)
