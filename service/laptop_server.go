@@ -38,7 +38,7 @@ func (server *LaptopServer) CreateLaptop(ctx context.Context, req *pb.CreateLapt
 		}
 	}
 
-	//some heavy processing e
+	//some heavy processing 
 	time.Sleep(6 * time.Second)
 
 	//	save the laptop to store
