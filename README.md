@@ -1,2 +1,2 @@
 # pcbook
-`grpc go implementation`
+`grpc golang implementation`
